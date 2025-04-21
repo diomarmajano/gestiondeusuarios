@@ -1,8 +1,7 @@
-//Para el uso de algunas anotaciones se utilizo como fuente https://projectlombok.org/
+//Para el uso de algunas anotaciones se utilizó como fuente https://projectlombok.org/
 //para hacer uso eficiente de lombok y aprovechar sus cualidades.
 
 package gestion.usuarios.gestiondeusuarios.model;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +13,6 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-
 
 @Entity
 @Table(name = "usuarios")
