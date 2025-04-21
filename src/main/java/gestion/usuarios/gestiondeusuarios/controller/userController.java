@@ -42,6 +42,6 @@ public class userController {
 
     @GetMapping("/{email}/{password}")
     public List<Usuarios>getUserByEmailAndPassword(@PathVariable String email, @PathVariable String password){
-        return userService.logginSesion(email, password);
+        return userService.loginSession(email, password);
     }
 }
