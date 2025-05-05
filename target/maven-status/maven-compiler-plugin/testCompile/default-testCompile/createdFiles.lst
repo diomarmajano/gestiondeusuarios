@@ -1,0 +1,4 @@
+gestion\usuarios\gestiondeusuarios\service\userServiceTest.class
+gestion\usuarios\gestiondeusuarios\repositories\userRepositoryTest.class
+gestion\usuarios\gestiondeusuarios\controller\userControllerTest.class
+gestion\usuarios\gestiondeusuarios\GestiondeusuariosApplicationTests.class

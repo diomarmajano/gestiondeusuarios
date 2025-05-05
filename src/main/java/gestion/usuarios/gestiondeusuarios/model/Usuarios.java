@@ -2,6 +2,8 @@
 //para hacer uso eficiente de lombok y aprovechar sus cualidades.
 
 package gestion.usuarios.gestiondeusuarios.model;
+import org.springframework.hateoas.RepresentationModel;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +18,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "usuarios")
-public class Usuarios {
+public class Usuarios extends RepresentationModel<Usuarios> {
     @Setter @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

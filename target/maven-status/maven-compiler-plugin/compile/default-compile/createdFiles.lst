@@ -1,0 +1,7 @@
+gestion\usuarios\gestiondeusuarios\service\userService.class
+gestion\usuarios\gestiondeusuarios\service\userServiceImpl.class
+gestion\usuarios\gestiondeusuarios\GestiondeusuariosApplication.class
+gestion\usuarios\gestiondeusuarios\controller\userController.class
+gestion\usuarios\gestiondeusuarios\model\Usuarios.class
+gestion\usuarios\gestiondeusuarios\repositories\userRepository.class
+gestion\usuarios\gestiondeusuarios\controller\UserNotFoundExeption.class
