@@ -66,15 +66,6 @@ public class userServiceTest {
         // Arrange: Crear un usuario inicial y simular su actualización
         Long userId = 1L; // ID del usuario existente
 
-        Usuarios user = new Usuarios();
-        user.setId(userId);
-        user.setNombre("Diomar");
-        user.setApellido("Cruz");
-        user.setEmail("diomar@gmail.com");
-        user.setPassword("12345678");
-        user.setDireccion("Calle 123");
-        user.setRol("admin");
-
         Usuarios updatedUser = new Usuarios();
         updatedUser.setId(userId);
         updatedUser.setNombre("Diomar Updated");
