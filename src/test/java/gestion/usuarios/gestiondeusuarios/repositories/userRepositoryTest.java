@@ -18,27 +18,25 @@ public class userRepositoryTest {
     @Autowired
     private userRepository userRepository;
 
+    private Usuarios user;
     @BeforeEach
     public void setUp() {
-        userRepository.deleteAll();
+        user = new Usuarios();
+        user.setNombre("Diomar");
+        user.setApellido("Majano");
+        user.setEmail("diomar@gmail.com");
+        user.setPassword("12345678");
+        user.setDireccion("Calle 123");
+        user.setRol("admin");
     }
 
     @AfterEach
     public void tearDown() {
        userRepository.deleteAll();
     }
-
+    //Test Metodo save del repositorio
     @Test
     public void testSaveUser() {
-        // Arrange: Se crea un objeto de la clase Usuarios y se le asignan valores a sus atributos.
-        Usuarios user = new Usuarios();
-        user.setNombre("Diomar");
-        user.setApellido("Cruz");
-        user.setEmail("diomar@gmail.com");
-        user.setPassword("12345678");
-        user.setDireccion("Calle 123");
-        user.setRol("admin");
-
         Usuarios resultado = userRepository.save(user);
         assertNotNull(resultado.getId());
         assertEquals(user.getNombre(), resultado.getNombre());
@@ -47,5 +45,27 @@ public class userRepositoryTest {
         assertEquals(user.getPassword(), resultado.getPassword());
         assertEquals(user.getDireccion(), resultado.getDireccion());
         assertEquals(user.getRol(), resultado.getRol());
+    }
+
+    //Test Para probar Correcta actualizacion de un usuario
+    @Test
+    public void testUpdateUser(){
+        final Long id = 1L;
+        user.setId(id);
+        user.setNombre("Diomar Rodriguez");
+        Usuarios updatedUser = userRepository.save(user);
+        assertEquals("Diomar Rodriguez", updatedUser.getNombre());
+    }
+
+    //Test Metodo deleteById del repositorio
+    @Test
+    public void testDeleteUser() {
+        Usuarios savedUser = userRepository.save(user);
+        assertNotNull(savedUser.getId());
+
+        userRepository.deleteById(savedUser.getId());
+        boolean exists = userRepository.findById(savedUser.getId()).isPresent();
+        assertEquals(false, exists);
+
     }
 }

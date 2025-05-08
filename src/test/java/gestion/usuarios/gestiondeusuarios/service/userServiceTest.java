@@ -69,7 +69,7 @@ public class userServiceTest {
         Usuarios updatedUser = new Usuarios();
         updatedUser.setId(userId);
         updatedUser.setNombre("Diomar Updated");
-        updatedUser.setApellido("Cruz Updated");
+        updatedUser.setApellido("Rodriguez Updated");
         updatedUser.setEmail("diomar_updated@gmail.com");
         updatedUser.setPassword("87654321");
         updatedUser.setDireccion("Calle 456");
