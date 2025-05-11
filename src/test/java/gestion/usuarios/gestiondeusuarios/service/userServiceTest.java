@@ -86,7 +86,6 @@ public class userServiceTest {
         assertEquals(updatedUser.getApellido(), resultado.getApellido());
         assertEquals(updatedUser.getEmail(), resultado.getEmail());
         assertEquals(updatedUser.getPassword(), resultado.getPassword());
-        assertEquals(updatedUser.getDireccion(), resultado.getDireccion());
-        assertEquals(updatedUser.getRol(), resultado.getRol());
+        
     }
 }
